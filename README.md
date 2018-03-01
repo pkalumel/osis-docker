@@ -44,5 +44,5 @@ You can create a superuser by using the following command:
 
 You can also load demo data in osis by using:
 ````
-# docker-compose run osis python manage.py loaddata demo_data.json
+# docker-compose run osis python manage.py load_fixtures
 ````
