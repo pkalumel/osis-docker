@@ -14,8 +14,8 @@ You need to install docker on your computer. Follow the [docker documentation](h
 2. Initialize submodules
 ````
 # git submodule update --init --remote --recursive
-# cp osis/.env.example osis/.env
-# cp osis-portal/.env.example osis-portal/.env
+# cp osis/.env.docker osis/.env
+# cp osis-portal/.env.docker osis-portal/.env
 ````
 3. Build containers
 ````
@@ -44,5 +44,5 @@ You can create a superuser by using the following command:
 
 You can also load demo data in osis by using:
 ````
-# docker-compose run osis python manage.py loaddata demo_data.json
+# docker-compose run osis python manage.py load_fixtures
 ````
