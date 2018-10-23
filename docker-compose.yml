@@ -11,6 +11,7 @@ services:
     depends_on:
       - db
       - rabbit
+      - redis
   osis:
     container_name: osis
     build: ./osis/
@@ -22,6 +23,7 @@ services:
     depends_on:
       - db
       - rabbit
+      - redis
   db:
     container_name: osis-db
     image: postgres:9.4
@@ -32,3 +34,8 @@ services:
   rabbit:
     container_name: osis-mq
     image: rabbitmq
+  redis:
+    container_name: osis-redis
+    image: redis:4.0.9
+    ports:
+      - "6379:6379"
